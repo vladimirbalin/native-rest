@@ -1,0 +1,9 @@
+{
+    "name": "vladimirb/native-rest",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "require": {}
+}
