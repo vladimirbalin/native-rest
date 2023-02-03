@@ -9,7 +9,7 @@ class Db
     public PDO $connection;
 
     public function __construct(
-        public array $config,
+        array $config,
     )
     {
         $dsn = sprintf("%s:host=%s;dbname=%s;port=%d",
@@ -29,5 +29,10 @@ class Db
     public function getConnection(): PDO
     {
         return $this->connection;
+    }
+
+    public function prepare($query): \PDOStatement|false
+    {
+        return $this->connection->prepare($query);
     }
 }

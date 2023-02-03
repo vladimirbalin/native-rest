@@ -8,6 +8,7 @@ class Application
     public Response $response;
     public Router $router;
     public Db $db;
+    public static Application $app;
 
     public function __construct(
         public array $config
@@ -15,12 +16,13 @@ class Application
     {
         $this->request = new Request();
         $this->response = new Response();
-        $this->router = new Router();
+        $this->router = new Router($this->request, $this->response);
         $this->db = new Db($this->config['db']);
+        self::$app = $this;
     }
 
-    public function run()
+    public function run(): void
     {
-        
+        $this->router->resolve();
     }
 }
