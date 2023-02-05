@@ -16,13 +16,13 @@ class Application
     {
         $this->request = new Request();
         $this->response = new Response();
-        $this->router = new Router($this->request, $this->response);
+        $this->router = new Router($this->request);
         $this->db = new Db($this->config['db']);
         self::$app = $this;
     }
 
     public function run(): void
     {
-        $this->router->resolve();
+        echo $this->router->resolve();
     }
 }
