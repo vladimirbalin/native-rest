@@ -5,7 +5,7 @@ namespace app\Controllers\User;
 use app\Middlewares\NotAuthorized;
 use core\Response;
 
-class UserInfo extends BaseController
+class ReadController extends BaseController
 {
     public function __construct()
     {
