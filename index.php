@@ -1,11 +1,11 @@
 <?php
 
-use app\Application;
 use app\Controllers\User\AuthController;
 use app\Controllers\User\CreateController;
 use app\Controllers\User\DeleteController;
 use app\Controllers\User\UpdateController;
 use app\Controllers\User\UserInfo;
+use core\Application;
 
 require_once __DIR__ . '/vendor/autoload.php';
 

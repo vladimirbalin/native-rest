@@ -2,9 +2,9 @@
 
 namespace app\Controllers\User;
 
-use app\Controller;
 use app\Repositories\UserRepository;
 use app\Services\UserService;
+use core\Controller;
 
 class BaseController extends Controller
 {

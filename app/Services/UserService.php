@@ -2,7 +2,7 @@
 
 namespace app\Services;
 
-use app\Application;
+use core\Application;
 use Exception;
 
 class UserService

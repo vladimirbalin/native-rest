@@ -4,7 +4,7 @@ namespace app\Middlewares;
 
 use app\Helpers\HttpHelper;
 use app\Repositories\UserRepository;
-use app\Response;
+use core\Response;
 
 class NotAuthorized
 {

@@ -2,7 +2,7 @@
 
 namespace app\Controllers\User;
 
-use app\Response;
+use core\Response;
 
 class AuthController extends BaseController
 {

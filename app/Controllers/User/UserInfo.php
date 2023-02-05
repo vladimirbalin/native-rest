@@ -3,7 +3,7 @@
 namespace app\Controllers\User;
 
 use app\Middlewares\NotAuthorized;
-use app\Response;
+use core\Response;
 
 class UserInfo extends BaseController
 {
@@ -15,7 +15,7 @@ class UserInfo extends BaseController
 
     public function __invoke($params)
     {
-        $id = (int)$params['int'];
+        $id = (int)$params['id'];
 
         $user = $this->repository->findById($id);
         if (!$user) {

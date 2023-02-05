@@ -3,7 +3,7 @@
 namespace app\Controllers\User;
 
 use app\Middlewares\NotAuthorized;
-use app\Response;
+use core\Response;
 
 class DeleteController extends BaseController
 {
