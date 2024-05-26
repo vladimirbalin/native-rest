@@ -1,6 +1,20 @@
-## Реализация mvc фреймворка, с REST API для работы с пользователями.
+## Тестовое задание
+
+### Описание:
+
+Реализовать методы REST API для работы с пользователями:
+
+1. Создание пользователя
+2. Обновление информации пользователя
+3. Удаление пользователя
+4. Авторизация пользователя
+5. Получить информацию о пользователе
+6. В файле README.md описать реализованные методы
+
+## REST API для работы с пользователями на нативном PHP
 
 ### Структура проекта:
+
 ```
 core                                -- mvc framework
 ├── Application.php
@@ -32,11 +46,12 @@ app                                 -- REST API реализация
 ```http
   POST /user
 ```
+
 + Body
     + (json) **Required**
-    
 
-Например: 
+Например:
+
 ``` 
 POST /user
 {
@@ -47,6 +62,7 @@ POST /user
 ```
 
 Возвращает JSON вида:
+
 ```
 Response 201
 {
@@ -57,6 +73,7 @@ Response 201
     }
 }
 ```
+
 `Response 400`, `Response 401`, `Response 404`.
 
 ### 2. Обновить информацию о пользователе
@@ -64,14 +81,16 @@ Response 201
 ```http
   PUT /user
 ```
+
 + Parameter
     + id (int) **Required**. Id обновляемого пользователя
 + Header
     + Authorization (Bearer) **Required**. token зарегестрированного пользователя
 + Body
-    + (json) **Required** 
+    + (json) **Required**
 
 Например:
+
 ```
 PUT /user?id=4
 Authorization: Bearer abc
@@ -83,7 +102,8 @@ Authorization: Bearer abc
 }
 ```
 
-Возвращает 
+Возвращает
+
 ```
 Response 200:
 {
@@ -94,6 +114,7 @@ Response 200:
     }
 }
 ```
+
 `Response 400`, `Response 401`, `Response 404`.
 
 ### 3. Удалить пользователя
@@ -101,16 +122,19 @@ Response 200:
 ```http
   DELETE /user
 ```
+
 + Parameter
     + id (int) **Required**. Id удаляемого пользователя
 + Header
     + Authorization (Bearer) **Required**. token зарегестрированного пользователя
 
 Например:
+
 ```
 DELETE /user?id=4
 Authorization: Bearer abc
 ```
+
 Возвращает `Response 204` `Response 400` `Response 401` `Response 404`
 
 ### 4. Получить информацию о пользователе
@@ -118,19 +142,21 @@ Authorization: Bearer abc
 ```http
   GET /user
 ```
+
 + Parameter
     + id (int) **Required**. Id получаемого пользователя
 + Header
     + Authorization (Bearer) **Required**. token зарегестрированного пользователя
- 
 
-Например: 
+Например:
+
 ```http
 GET /user?id=1 
 Authorization: Bearer abc
 ```
 
 Возвращает JSON вида:
+
 ```
 Response 200
 {
@@ -141,14 +167,5 @@ Response 200
       }
 }
 ```
+
 `Response 400`, `Response 401`, `Response 404`.
-
----
- Реализовать методы REST API для работы с пользователями:
-
-1. Создание пользователя
-2. Обновление информации пользователя
-3. Удаление пользователя
-4. Авторизация пользователя
-5. Получить информацию о пользователе
-6. В файле README.md описать реализованные методы
